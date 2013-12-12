@@ -19,10 +19,10 @@ body {
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
 
 h1 { margin-bottom: 1em; }
+
 p { margin: 1em 0; }
 
 a         { color: #00a; }
@@ -49,13 +49,17 @@ a:visited { color: #a0a; }
   font-size: 80%;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /*****************************************************************************/
 /*
 /* Site
 /*
-/*****************************************************************************/
-
-.site {
+/*****************************************************************************/ .site {
   font-size: 115%;
   text-align: justify;
   width: 42em;
