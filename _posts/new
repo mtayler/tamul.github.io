@@ -1,0 +1,54 @@
+#!/usr/local/bin/bash
+
+edit=false
+markdown=false
+
+while getopts ":em" opt; do
+    case $opt in
+	e)
+	    edit=true
+	    ;;
+	m)
+	    markdown=true
+	    ;;
+	\?) 
+	    "Invalid option: -$OPTARG\n" \
+	    "Usage: new [-em] filename" \
+	    "-e: Edit file after creating" \
+	    "-m: Markdown instead of Textile" >&2
+	    ;;	
+    esac
+done
+
+if [[ ! "$@" =~ [a-zA-Z] ]]; then
+    echo "Enter a title" >&2
+fi
+
+title="$@"
+# remove options
+title=$(echo $title | sed 's/-[a-zA-Z]//g')
+# read title and convert spaces to hyphens
+filename="$(echo $title | sed 's/ /-/g')"
+# make filename lowercase
+filename="$(echo $filename | tr '[:upper:]' '[:lower:]')"
+# add date to filename
+filename="$(date "+%Y-%m-%d-")$filename"
+
+echo "---
+layout: post
+title: $title 
+---" > "$filename".textile
+
+if $markdown; then
+    mv "$filename".textile "$filename".md
+fi
+
+if ! $edit; then
+    exit 0
+fi
+
+if $markdown; then
+    vim "$filename".md
+else
+    vim "$filename".textile
+fi
