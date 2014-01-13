@@ -108,6 +108,16 @@ a:visited { color: #a0a; }
   color: #aaa;
 }
 
+.host-footer {
+  font-size: small;
+  color: #A6A6A6;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  margin-left: 1em;
+}
+
 .footer {
   font-size: 80%;
   color: #666;
