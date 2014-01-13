@@ -29,6 +29,8 @@ title="$@"
 title=$(echo $title | sed 's/-[a-zA-Z]//g')
 # read title and convert spaces to hyphens
 filename="$(echo $title | sed 's/ /-/g')"
+# remove "of", and "the"
+filename="$(echo $filename | sed 's/(of|then)//g')"
 # make filename lowercase
 filename="$(echo $filename | tr '[:upper:]' '[:lower:]')"
 # add date to filename
