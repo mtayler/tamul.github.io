@@ -167,6 +167,11 @@ a:visited { color: #a0a; }
   padding: 0 .4em;
 }
 
+.post h6 {
+  font-size: 85%;
+  color: #8A8A8A;
+}
+
 .post ul, .post ol {
   margin-left: 1.35em;
 }

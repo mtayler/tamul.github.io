@@ -1,0 +1,31 @@
+---
+layout: post
+title: The Woes Domain Registration and Hosting 
+---
+Originally this site was attached solely to my GitHub User Page. I felt that a custom domain would be beneficial if I ever decided to create a site with server-side scripting and non-static pages in general. This proved to be quite the challenge.
+
+h2. 1. Choosing a Domain
+
+This was the most un-involved, boring, stressful part of the process. It was also where I started, so there might be some bias there. I had to choose a domain that was: *a)* memorable, and *b)* descriptive. I contacted a few people, included the owner of "tamul.com":tamul.com, an electronic/house musician. I haven't gotten an answer yet, so that was a no-go.
+
+I nearly switched names, and checked if  "thallos.org":thallos.org was available, but this was also owned. Specifically, it was only a mail host, but came with a bunch of perks that the owner was unwilling to give up/transfer. _Darn_.
+
+Switching back to the old alias of "tamul", I obtained inspiration from "atmos.org":atmos.org (I love that alias by the way), and went with "tamul.org (this will take you exactly where you expect)":tamul.org.
+
+h2. 2. Domain Registration
+
+I can tell you right now, domain registration is a pain. I tried researching which domain registrar was the best, but didn't come up with a ton of results. I tried the ones I found, link "Name.com":http://name.com and "Namecheap.com":http://namecheap.com, and multiple others. Eventually I settled on Namecheap, as they had the cheapest hosting with presumable the best reputation.
+
+h2. 3. Hosting
+
+h6. (Or, "Domain Registration-Revisited")
+
+Before I actually registered this domain, I decided to try and find hosting for the website. I noticed many domain registrars provided hosting at an added cost, and this caused me to re-evaluate my choice in registrar.
+
+I began looking for the cheapest bundle, and found "NearlyFreeSpeech.net":nearlyfreespeech.net. This site is absolutely amazing for a small site, cheap, allegedly great support, and easy to understand documentation. _However_, there domain registration is lacking in options, and I wanted the freedom to point the domain where ever I needed.
+
+About now I realized Amazon had web-hosting, and decided to see what the prices where. Said simply, the prices are great (potentially *free* if you have a small enough site with little enough traffic). _However_, again, this approach had one major flaw. Amazon Web Services is amazingly powerful, and customizable. Which means it's also confusing as hell.
+
+h2. 4. Bringing It All Together
+
+Eventually I decided to continue hosting my website on GitHub Pages, and decided if I ever needed a non-static site, I could point the domain somewhere that allowed me PHP, Python, etc. This decision was actually inspired by a "blog post":http://blog.andytaylor.me/post/82193127/cheap-as-hell-hosting-how-to-set-up-a-website-with-as written by Andy Taylor. I hope this can help simplify anyone else looking to do the same as I was, because it's incredibly difficult to decide on what to use, and how to use it.
