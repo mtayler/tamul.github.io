@@ -1,6 +1,8 @@
 ---
 layout: post
 title: The Woes Domain Registration and Hosting 
+change_frequency: never
+priority: 0.5
 ---
 Originally this site was attached solely to my GitHub User Page. I felt that a custom domain would be beneficial if I ever decided to create a site with server-side scripting and non-static pages in general. This proved to be quite the challenge.
 

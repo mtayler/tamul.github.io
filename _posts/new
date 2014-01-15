@@ -1,5 +1,12 @@
 #!/usr/local/bin/bash
 
+new_post_contents="---
+layout: post
+title: $title 
+change_frequency: never
+priority: 0.5
+---"
+
 edit=false
 markdown=false
 
@@ -36,10 +43,7 @@ filename="$(echo $filename | tr '[:upper:]' '[:lower:]')"
 # add date to filename
 filename="$(date "+%Y-%m-%d-")$filename"
 
-echo "---
-layout: post
-title: $title 
----" > "$filename".textile
+echo $new_post_contents > "$filename".textile
 
 if $markdown; then
     mv "$filename".textile "$filename".md
