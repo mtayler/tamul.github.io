@@ -1,11 +1,4 @@
-#!/usr/local/bin/bash
-
-new_post_contents="---
-layout: post
-title: $title 
-change_frequency: never
-priority: 0.5
----"
+#!/bin/bash
 
 edit=false
 markdown=false
@@ -28,6 +21,7 @@ while getopts ":em" opt; do
 done
 
 if [[ ! "$@" =~ [a-zA-Z] ]]; then
+    exit 1
     echo "Enter a title" >&2
 fi
 
@@ -41,9 +35,14 @@ filename="$(echo $filename | sed 's/(of|then)//g')"
 # make filename lowercase
 filename="$(echo $filename | tr '[:upper:]' '[:lower:]')"
 # add date to filename
-filename="$(date "+%Y-%m-%d-")$filename"
+#filename="$(date "+%Y-%m-%d-")$filename"
 
-echo $new_post_contents > "$filename".textile
+echo "---
+layout: post
+title: $title 
+change_frequency: never
+priority: 0.5
+---" > "$filename".textile
 
 if $markdown; then
     mv "$filename".textile "$filename".md
