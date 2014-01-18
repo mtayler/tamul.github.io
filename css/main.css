@@ -13,8 +13,6 @@
 html, body { height: 100%; }
 
 body {
-  margin-left: 1em;  
-  margin-right: 1em;
   background-color: #FFFFFF;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
@@ -40,7 +38,8 @@ a:visited { color: #a0a; }
   font-size: 115%;
   text-align: justify;
   width: 42em;
-  margin: 3em auto 2em;
+  margin: 3em auto; 2em;
+  padding: 0em 2em 0em;
   line-height: 1.5em;
 }
 
@@ -76,18 +75,17 @@ a:visited { color: #a0a; }
 }
 
 .host-footer {
-  font-size: small;
-  color: #A6A6A6;
+  font-size: 80%;
+  opacity: 0.5;
   bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
-  margin-bottom: 0em;
   margin-left: 1em;
 }
 
 .host-footer a {
-  color: #8085C1;
+  color: #1F2BC1;
 }
 
 .footer {
@@ -160,15 +158,15 @@ a:visited { color: #a0a; }
 }
 
 .projects a {
-    color: #242781;
+  color: #242781;
 }
 
 .projects a:visited {
-    color: #81247F;
+  color: #81247F;
 }
 
 .projects a:hover {
-    color: #38449C;
+  color: #38449C;
 }
 
 /*****************************************************************************/
@@ -178,7 +176,7 @@ a:visited { color: #a0a; }
 /*****************************************************************************/
 
 .post-title h1 {
-    font-size: 115%;
+  font-size: 115%;
 }
 
 /* standard */
@@ -189,7 +187,7 @@ a:visited { color: #a0a; }
 }
 
 .post h2 {
-    font-size: 105%;
+  font-size: 105%;
 }
 
 .post h6 {
@@ -218,6 +216,7 @@ a:visited { color: #a0a; }
 }
 
 .post ul, .post ol {
+  list-style-type: none;
   margin-left: 1.35em;
 }
 
