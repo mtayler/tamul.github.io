@@ -1,33 +1,47 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% for post in site.posts %}
     <url>
-        <loc>http://tamul.org/2014/01/10/brand-new-blog-no-posts.html</loc>
-        <lastmod>2014-01-14T18:31:31-08:00</lastmod>
-        <changefreq>never</changefreq>
-        <priority>0.5</priority>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      {% if post.lastmod == null %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
     </url>
-    <url>
-        <loc>http://tamul.org/2014/01/12/woes-domain-registration-and-hosting.html</loc>
-        <lastmod>2014-01-14T18:32:09-08:00</lastmod>
-        <changefreq>never</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>http://tamul.org/projects.html</loc>
-        <lastmod>2014-01-14T18:28:53-08:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>http://tamul.org/about.html</loc>
-        <lastmod>2014-01-14T18:29:17-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>http://tamul.org/</loc>
-        <lastmod>2014-01-14T18:32:09-08:00</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
+  {% endfor %}
+  {% for page in site.pages %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    {% if page.sitemap.lastmod %}
+      <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif page.lastmod %}
+      <lastmod>{{ page.lastmod | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif page.date %}
+      <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+      <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+    {% if page.sitemap.changefreq %}
+      <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+    {% else %}
+      <changefreq>monthly</changefreq>
+    {% endif %}
+    {% if page.sitemap.priority %}
+      <priority>{{ page.sitemap.priority }}</priority>
+    {% else %}
+      <priority>0.3</priority>
+    {% endif %}
+  </url>
+  {% endfor %}
 </urlset>
