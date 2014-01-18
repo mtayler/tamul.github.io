@@ -8,7 +8,7 @@ title: Hacking Lights on to an Alarm Clock
 
 h2. What's the point?
 
-I plug my phone in before I go to sleep every night. Except ,as nights are, it's dark, and I have end up scratching a new port into the bottom of my phone. So I hacked a light on to the alarm-clock/dock combo that lights up when the dimmable display is below the highest level. This works because when the alarm is turned off in the morning, the display switches to the brightest setting, but I usually turn it down before I go to sleep. Plus it was cool having it work in the end.
+I plug my phone in before I go to sleep every night. Except, as nights are, it's dark, and I have end up scratching a new port into the bottom of my phone. So I hacked a light on to the alarm-clock/dock combo that lights up when the dimmable display is below the highest level. This works because when the alarm is turned off in the morning, the display switches to the brightest setting, but I usually turn it down before I go to sleep. Plus it was cool having it work in the end.
 
 h2. Interfacing
 
