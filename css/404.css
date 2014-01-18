@@ -1,0 +1,34 @@
+body {
+    background-color: #FFFFFF;
+    font: 13.34px Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+#container {
+    width: 55em;
+    margin: auto;
+    display: inline-block;
+}
+
+#image {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#content {
+    display: inline-block;
+    vertical-align: -10em;
+}
+
+#text h1 {
+    margin: 0.2em;
+}
+
+#search {
+    margin-top: 5em;
+    width: 25em;
+}
+
+#search p {
+    margin-bottom: 0em;
+}
