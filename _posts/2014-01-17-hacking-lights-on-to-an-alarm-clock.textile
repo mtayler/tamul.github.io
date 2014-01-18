@@ -30,7 +30,7 @@ To keep the array index small, I saved the averages of the 100 readings to anoth
 I added one more array, again of 100, and saved the averaged averages to this array. After averaging the averaged average readings (diagram below for the confused), the value was constant enough to use as a trigger (and somehow dropped two place values, making the max value 600 become 6).
 
 <figure>
-    <img src="/assets/alarm-clock-program-arrays.jpg">
+    <img src="/assets/alarm-clock-array-model.jpg">
     <figcaption>The array model</figcaption>
 </figure>
 
