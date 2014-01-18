@@ -3,7 +3,7 @@ layout: post
 title: Hacking Lights on to an Alarm Clock 
 ---
 <div class=disclaimer>
-    <p>I am in no way responsible if you break your clock trying this.</p>
+    <p>I am in no way responsible if you break your <em>anything</em> trying this.</p>
 </div>
 
 h2. What's the point?
