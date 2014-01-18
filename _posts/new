@@ -34,14 +34,10 @@ filename="$(echo $title | sed 's/ /-/g')"
 filename="$(echo $filename | sed 's/(of|then)//g')"
 # make filename lowercase
 filename="$(echo $filename | tr '[:upper:]' '[:lower:]')"
-# add date to filename
-#filename="$(date "+%Y-%m-%d-")$filename"
 
 echo "---
 layout: post
 title: $title 
-change_frequency: never
-priority: 0.5
 ---" > "$filename".textile
 
 if $markdown; then
