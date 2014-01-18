@@ -11,13 +11,14 @@ body {
 }
 
 #image {
+    float: left;
     display: inline-block;
     vertical-align: middle;
 }
 
 #content {
     display: inline-block;
-    vertical-align: -10em;
+    vertical-align: -25em;
 }
 
 #text h1 {
@@ -26,7 +27,7 @@ body {
 
 #search {
     margin-top: 5em;
-    width: 25em;
+    width: 30em;
 }
 
 #search p {
