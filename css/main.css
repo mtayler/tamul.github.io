@@ -31,34 +31,6 @@ a:visited { color: #a0a; }
 
 /*****************************************************************************/
 /*
-/* Home
-/*
-/*****************************************************************************/
-.about h1 {
-  margin-bottom: 0.3em;
-}
-
-.about p {
-  margin-top: 0.3em;
-  margin-bottom: 1.4em;
-}
-
-.projects h1 {
-  margin-bottom: 0.3em;
-}
-
-.projects h2 {
-  margin-left: 0.5em;
-}
-
-.projects p {
-  line-height: 1.15em;
-  margin-top: 0em;
-  margin-left: 1.5em;
-}
-
-/*****************************************************************************/
-/*
 /* Site
 /*
 /*****************************************************************************/
@@ -155,6 +127,45 @@ a:visited { color: #a0a; }
 .footer .contact a {
   color: #8085C1;
 }
+
+/*****************************************************************************/
+/*
+/* Pages
+/*
+/*****************************************************************************/
+.about h1 {
+  margin-bottom: 0.3em;
+}
+
+.about p {
+  margin-top: 0.3em;
+  margin-bottom: 1.4em;
+}
+
+.projects h1 {
+  margin-bottom: 0.3em;
+}
+
+.projects h2 {
+  margin-left: 0.5em;
+}
+
+.projects p {
+  line-height: 1.15em;
+  margin-top: 0em;
+  margin-left: 1.5em;
+}
+
+.projects a {
+    color: #242781;
+}
+
+.projects a:visited {
+    color: #81247F;
+}
+
+.projects a:hover {
+    color: #38449C;
 
 /*****************************************************************************/
 /*
