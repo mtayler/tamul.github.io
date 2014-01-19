@@ -15,7 +15,7 @@ h2. Interfacing
 The display brightness is toggled between 4 settings (high, medium, low, and off) by a button attached to two push buttons on the outer sides of the button. I tried interfacing with these buttons, but couldn't find out how the damn things worked. I don't have the benefit of an oscilloscope, and messing around with a multimeter around the two terminals, while clicking the button, I didn't see any change. I kept searching on the PCB around the buttons, probing with the multimeter, but couldn't find out a damn thing.
 
 <figure>
-    <img src="/assets/alarm-clock-display-pcb.jpg">
+    <img src="/assets/alarm-clock-hack/display-pcb.jpg">
     <figcaption>Alarm clock display and PCB overview -- LED comes in later</figcaption>
 </figure>
 
@@ -30,18 +30,18 @@ To keep the array index small, I saved the averages of the 100 readings to anoth
 I added one more array, again of 100, and saved the averaged averages to this array. After averaging the averaged average readings (diagram below for the confused), the value was constant enough to use as a trigger (and somehow dropped two place values, making the max value 600 become 6).
 
 <figure>
-    <img src="/assets/alarm-clock-array-model.jpg">
+    <img src="/assets/alarm-clock-hack/array-model.jpg">
     <figcaption>The array model</figcaption>
 </figure>
 
-Utilizing the equivalent of one million readings averaged, a simple function sets the LED's digital pin on the Arduino if the value is above a certain number (in this case, 4). You can get the source code "here":/assets/alarm_clock_led.ino.
+Utilizing the equivalent of one million readings averaged, a simple function sets the LED's digital pin on the Arduino if the value is above a certain number (in this case, 4). You can get the source code "here":/assets/alarm-clock-hack/alarm_clock_led.ino.
 
 h2. Putting it all together
 
 Needing a power supply for the Arduino, I tapped into the +5V wire going to one of the clock's iPhone/iPad docks.
 
 <figure>
-    <img src="/assets/alarm-clock-wiring-overview.jpg">
+    <img src="/assets/alarm-clock-hack/wiring-overview.jpg">
     <figcaption>+5V, ground, and wire for reading voltage</figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ After setting a common ground, I realized I had a problem. For some reason the d
 I tried reading from the negative terminal, which fixed the problem. I honestly have no idea how this worked, as I wasn't (theoretically) supplying power, only reading the power already supplied - I suspect it may have been from the lack of common ground between the display and the Arduino. The only side effect this had was inverting the reading - when the display was at full brightness, the reading was now 0, and with the back light off, 6 - a quick change of the threshold and flip of the inequality sign.
 
 <figure>
-    <img src="/assets/alarm-clock-led-placement.jpg">
+    <img src="/assets/alarm-clock-hack/led-placement.jpg">
     <figcaption>LED placement on a lamp above the clock</figcaption>
 </figure>
 
