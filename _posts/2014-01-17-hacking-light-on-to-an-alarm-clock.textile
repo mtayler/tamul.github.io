@@ -27,6 +27,11 @@ The true difficulty behind this method was using the voltage readings from whate
 
 To keep the array index small, I saved the averages of the 100 readings to another array of the same size. Rather than a linear scale of readings by increasing array size, this lead to exponential increase, while keeping the memory usage just over 1000kB including the bootloader. This worked much better, and the readings were more consistent. However, they still weren't _quite_ consistent enough to base the LED's state off of.
 
+<figure>
+    <img src="/assets/alarm-clock-hack/variable-averages.jpg">
+    <figcaption>The averages still jumped around quite a bit</figcaption>
+</figure>
+
 I added one more array, again of 100, and saved the averaged averages to this array. After averaging the averaged average readings (diagram below for the confused), the value was constant enough to use as a trigger (and somehow dropped two place values, making the max value 600 become 6).
 
 <figure>
