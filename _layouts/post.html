@@ -1,11 +1,44 @@
 ---
 layout: default
 ---
-<div class=post-title>
+<div class="post-title">
   <h1>{{ page.title }}</h1>
+  <div class="social-buttons">
+    <!-- Twitter -->
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="TaylerRM">Tweet</a>
+    <!-- Google Plus -->
+    <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+    <!-- Reddit -->
+    <div id="reddit"><script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script></div>
+  </div>
   <p class="meta">{{ page.date | date_to_string }}</p>
 </div>
 
 <div class="post">
 {{ content }}
 </div>
+
+
+<div class="social-buttons">
+  <!-- Twitter -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="TaylerRM">Tweet</a>
+  <!-- Google Plus -->
+  <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+  <!-- Reddit -->
+  <div id="reddit"><script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script></div>
+</div>
+
+<!-- Share button code -->
+<code>
+  <!-- Twitter -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <!-- Google Plus -->
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/platform.js';
+      po.width = "108px";
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+</code>

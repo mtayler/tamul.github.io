@@ -138,8 +138,17 @@ a:visited { color: #a0a; }
   list-style-type: none;
 }
 
-.about h1 {
-  margin-bottom: 0.3em;
+.social-buttons {
+  vertical-align: middle;
+}
+
+[id^=___plus] {
+  width:108px !important;
+}
+
+#reddit {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .about p {
