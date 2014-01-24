@@ -146,11 +146,6 @@ a:visited { color: #a0a; }
   width:108px !important;
 }
 
-#reddit {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .about p {
   margin-top: 0.3em;
   margin-bottom: 1.4em;
