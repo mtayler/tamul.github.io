@@ -1,4 +1,6 @@
 name: tamul.org
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 url: http://www.tamul.org
+gems:
+    - jekyll-sitemap
