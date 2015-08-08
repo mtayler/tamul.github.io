@@ -1,6 +1,6 @@
 name: tamul.me
 markdown: redcarpet
 highlighter: pygments
-url: http://tamul.me
+url: http://www.tamul.org
 gems:
     - jekyll-sitemap
