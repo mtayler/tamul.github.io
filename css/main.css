@@ -228,7 +228,6 @@ a:visited { color: #a0a; }
 .post figure > img {
   width: auto;
   height: auto;
-  max-height: 100%;
   max-width: 100%;
 }
 
