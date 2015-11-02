@@ -25,4 +25,8 @@ The 3.3V and 5V outputs are relatively stable, with the 3.3V output measuring al
 
 The biggest gripe with this implementation is the inability to probe a circuit under test while using the variable voltage output. To acheive 1.3V-20V, ground is instead the -12V rail. Noise filtering at the Mains input causes continuity between the ground and earth, which when accidentally connecting an oscilloscope ground makes a nasty ground loop. There's benefits to leaving the "ground" at a -12V potential and shifting the output on the scope by 12V, and swapping the -12V for actual ground. What path I take will probably be decided by how often I require voltages higher than 5V, because frankly while the oscilloscope survived the first time I'd rather not risk another accident.
 
+<figure>
+    <img src="/assets/atx-bench-psu/glamour.jpg">
+</figure>
+
 All things considered, the project resulted in a handy bench power supply that, while a little questionable, works reasonably well keeping a couple things in mind. The outputs all have current limiting (which is *really* is only effective against a dead short), and the most used 5V output is very stable. While there's some obvious improvements that could be made, the result works quite well.
