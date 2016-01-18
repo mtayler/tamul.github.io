@@ -1,21 +1,21 @@
 #!/bin/bash
 
 edit=false
-markdown=false
+ext="md"
 
 while getopts ":em" opt; do
     case $opt in
 	e)
 	    edit=true
 	    ;;
-	m)
-	    markdown=true
+	t)
+	    ext="textile"
 	    ;;
 	\?) 
 	    "Invalid option: -$OPTARG\n" \
 	    "Usage: new [-em] filename" \
 	    "-e: Edit file after creating" \
-	    "-m: Markdown instead of Textile" >&2
+	    "-t: Textile instead of Markdown" >&2
 	    ;;	
     esac
 done
@@ -38,18 +38,10 @@ filename="$(echo $filename | tr '[:upper:]' '[:lower:]')"
 echo "---
 layout: post
 title: $title 
----" > "$filename".textile
-
-if $markdown; then
-    mv "$filename".textile "$filename".md
-fi
+---" > "$filename".$ext
 
 if ! $edit; then
     exit 0
 fi
 
-if $markdown; then
-    vim "$filename".md
-else
-    vim "$filename".textile
-fi
+nvim "$filename".$ext
