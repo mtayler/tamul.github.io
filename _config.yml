@@ -1,5 +1,4 @@
 name: tamul.me
-markdown: redcarpet
 highlighter: pygments
 url: http://tamul.me
 gems:
