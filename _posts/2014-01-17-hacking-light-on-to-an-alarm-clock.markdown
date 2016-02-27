@@ -2,15 +2,18 @@
 layout: post
 title: Hacking a Light on to an Alarm Clock
 ---
-<div style="background:#F78181; border: 2px solid red;" class=disclaimer>
+<div style="background:#F78181; border: 2px solid red;">
     <p>February 26, 2016</p>
     <p>This project was done waaaay before I had really any idea what I was doing. Frankly I'm just glad I didn't kill myself on the 120V AC</p>
 </div>
+{: .disclaimer}
 
-<div class=disclaimer>
+<div>
     <p>I am in no way responsible if you break your <em>anything</em> trying this.</p>
 </div>
+{: .disclaimer}
 <p></p>
+
 What's the point?
 =================
 
