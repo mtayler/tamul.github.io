@@ -1,5 +1,6 @@
 name: tamul.me
-highlighter: pygments
+highlighter: rouge
+markdown: kramdown
 url: http://tamul.me
 gems:
     - jekyll-sitemap
